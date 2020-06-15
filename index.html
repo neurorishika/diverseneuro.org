@@ -32,6 +32,7 @@
   <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
 
 
+
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
 	    <div class="container">
 	      <a class="navbar-brand" href="index.html">DiverseNeuro<span>.</span>org</a>
@@ -46,7 +47,7 @@
 	          <li class="nav-item"><a href="#studydesign-section" class="nav-link"><span>Study Design</span></a></li>
 	          <li class="nav-item"><a href="#team-section" class="nav-link"><span>The Team</span></a></li>
 	          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
-            <!--<li class="nav-item"><a href="https://forms.gle/E8QgT8eSSrh139Kx9" class="nav-link"><span>Take the Survey</span></a></li>-->
+            <!--<li class="nav-item" id='random1'></li>-->
 	        </ul>
 	      </div>
 	    </div>
@@ -62,8 +63,8 @@
 	        		<span class="subheading">A comprehensive project about</span>
 		  				<h1>Inclusivity in Neuroscience</h1>
 		  				<p>Does interdisciplinarity translate into intersectionality? Let’s look at what the data has to say.</p>
-		  				<p><a href="#" class="btn btn-primary py-3 px-4">Survey starts soon!<sup>*</sup></a>
-                <!--<a href="https://forms.gle/E8QgT8eSSrh139Kx9" class="btn btn-primary py-3 px-4">Survey starts soon!<sup>*</sup></a>--></p>
+		  				<!--id='random2'-->
+              <p><a href="#" class="btn btn-primary py-3 px-4">Survey starts soon!<sup>*</sup></a></p>
               <p style="font-size:10pt">* If you do not have access to google forms in your region, we suggest you use a trusted VPN to access the same.</p>
 	          </div>
 	        </div>
@@ -382,6 +383,13 @@
     				</div>
     			</div>
     		</div>
+        <div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-9 heading-section text-center ftco-animate">
+            <h3 class="mb-4">Acknowledgement</h3>
+            <p>Dr.Anand Krishnan, Dr. Nishad Matange and Dr. Pooja Sancheti have been integral to the design of this survey.
+              We would like to express our most heartfelt gratitude to them for their invaluable feedback and encouragement.</p>
+          </div>
+        </div>
     	</div>
     </section>
 
@@ -485,6 +493,17 @@
   <script src="js/google-map.js"></script>
 
   <script src="js/main.js"></script>
+  <script>
+  if (Math.random() < 0.5) {
+    text1 = '<a href="https://forms.gle/E8QgT8eSSrh139Kx9" class="nav-link"><span>Take the Survey</span></a>';
+    text2 ='<a href="https://forms.gle/E8QgT8eSSrh139Kx9" class="btn btn-primary py-3 px-4">Take the Survey 1<sup>*</sup></a>'
+  } else {
+    text1 = '<a href="https://forms.gle/E8QgT8eSSrh139Kx9" class="nav-link"><span>Take the Survey</span></a>';
+    text2 ='<a href="https://forms.gle/E8QgT8eSSrh139Kx9" class="btn btn-primary py-3 px-4">Take the Survey 2<sup>*</sup></a>'
+  }
+  document.getElementById("random1").innerHTML = text1;
+  document.getElementById("random2").innerHTML = text2;
+  </script>
 
   </body>
 </html>
